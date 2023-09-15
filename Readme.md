@@ -1,19 +1,19 @@
-implementation group: 'org.apache.kafka', name: 'kafka_2.13', version: '3.4.0', {
+implementation 'org.apache.kafka:kafka_2.13:3.4.0' {
         exclude group: 'org.apache.zookeeper', module: 'zookeeper'
     }
-    
-    testImplementation group: 'org.apache.kafka', name: 'kafka_2.13', version: '3.4.0', {
-        exclude group: '*'
+
+    testImplementation 'org.apache.kafka:kafka_2.13:3.4.0' {
+        exclude module: '*'
     }
 
-    implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '3.4.0'
+    implementation 'org.apache.kafka:kafka-clients:3.4.0'
     
-    compileOnly(group: 'org.apache.kafka', name: 'kafka-clients', version: '3.4.0') {
-        exclude group: '*'
+    compileOnly('org.apache.kafka:kafka-clients:3.4.0') {
+        exclude module: '*'
     }
 
-    implementation group: 'org.apache.kafka', name: 'connect-api', version: '3.4.0'
-    implementation group: 'org.apache.kafka', name: 'connect-json', version: '3.4.0'
-    implementation group: 'org.apache.kafka', name: 'connect-runtime', version: '3.4.0'
-    
-    testImplementation group: 'org.apache.curator', name: 'curator-test', version: '5.1.0'
+    implementation 'org.apache.kafka:connect-api:3.4.0'
+    implementation 'org.apache.kafka:connect-json:3.4.0'
+    implementation 'org.apache.kafka:connect-runtime:3.4.0'
+
+    testImplementation 'org.apache.curator:curator-test:5.1.0'
