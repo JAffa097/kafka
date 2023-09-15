@@ -10,8 +10,10 @@ public class Main {
        System.err.println(zookeeper.getConnectString());
        EmbeddedKafka kafka = new EmbeddedKafka();
        kafka.start(zookeeper.getConnectString());
+       kafka.createTopic("Topic1");
+        kafka.stop();
        zookeeper.stop();
-       kafka.stop();
+
 
     }
 }

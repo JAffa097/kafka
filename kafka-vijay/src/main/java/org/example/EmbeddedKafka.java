@@ -103,4 +103,9 @@ String logDirectoryPath;
         });
     }
 
+    public void createTopic(String topicName){
+         TopicCreation topicCreation = new TopicCreation();
+         topicCreation.createTopic(topicName);
+    }
+
 }
